@@ -1,0 +1,259 @@
+blue_primary=#0DA2BD
+grey_primary=rgb(120, 120, 120)
+grey_clear=rgb(138, 138, 138)
+grey_clear2=rgb(234, 234, 234)
+grey_dark=rgb(85, 85, 85)
+
+*, body
+    font-family: 'Open Sans', sans-serif;
+    color: grey_primary
+    
+a
+    text-decoration: none
+    
+.icon i
+    color: blue_primary
+
+.text-blue
+    color: blue_primary !important
+
+.text-bold
+    font-weight: 700 !important
+
+button
+    border: none
+    padding: 8px 24px
+    font-size: 1.1rem
+    border-radius: 5px
+    font-weight: 400
+    cursor: pointer
+
+.btn-primary
+    background: blue_primary
+    color: white
+    
+.btn-secondary
+    background: white
+    color: grey_dark
+    font-weight: 600
+
+.img-cont
+    position relative
+    img
+        position absolute
+        width: 100%
+        height: 100%
+
+header
+    nav
+        display: flex
+        justify-content: space-between
+        padding: 24px 12px
+        
+        #logo
+            color: grey_dark
+            font-size: 1.6rem
+
+        ul
+            color: grey_primary
+            display: flex
+            align-items: center
+            gap: 16px
+
+main
+    padding-bottom: 64px
+
+    section
+        margin-top: 64px
+        &.section-main
+            .banner
+                height: 300px
+                img
+                    object-fit: cover
+            .section-main__info
+                text-align: center
+                
+                &> *
+                    margin-top: 16px
+                
+                .section-main__title
+                    font-size: 2rem
+                    font-weight: 500
+                    color: grey_dark
+                    
+                .section-main__desc
+                    font-size: 1.2rem
+                    color: grey_primary
+
+                .section-main__actions
+                    display: flex
+                    justify-content: center
+                    button
+                        padding-top: 0px
+                        padding-bottom: 0px
+                        &:nth-child(2)
+                            display: inline-flex
+                            align-items: center
+                            span
+                                &:nth-child(1)
+                                    font-size: 2rem
+                                    // color: blue_primary
+                                &:nth-child(2)
+                                    margin-left: 8px
+        &.section-services
+            margin-top: 128px
+            padding: 0 160px
+            ul
+                display: flex
+                justify-content: center
+                align-items: center
+                gap: 32px
+                li
+                    align-self: center
+                    display: flex
+                    flex-direction: column
+                    gap: 8px
+                    .service-img
+                        font-size: 2.4rem
+                    .service-title
+                        font-size: 1.2rem
+                        font-weight: 600
+                    .service-desc
+                        font-size: 0.9rem
+                        color: black
+        
+        &.section-products
+            margin-top: 128px
+            padding: 0 144px
+            ul
+                display: flex
+                justify-content: center
+                gap: 32px
+                li
+                    &[selected]
+                        background: blue_primary
+                        *
+                            color: white
+
+                    box-shadow: 0 0px 18px 6px grey_clear2;
+                    padding: 16px 32px
+                    color: grey_dark
+                    display: flex
+                    flex-direction: column
+                    gap: 8px
+                    .product-img
+                        font-size: 2.4rem
+                    .product-title
+                        font-size: 1.2rem
+                        font-weight: 600
+        &.section-team
+            margin-top: 128px
+            padding: 0 144px
+            
+            // &__info
+            .section-team__info
+                text-align: center
+                &__title
+                    font-size: 2rem
+                    color: grey_dark
+                &__desc
+                    margin-top: 16px
+                    color: grey_clear
+            
+            ul
+                margin-top: 32px
+                display: flex
+                justify-content: center
+                gap: 16px
+                li
+                    position: relative
+                    .img-cont
+                        width: 240px
+                        height: 300px
+                        img
+                            object-fit: cover
+                            border-radius: 8px
+                    .team-info
+                        position absolute
+                        text-align: center
+                        background: white
+                        border-radius: 10px
+                        margin-top: -10px
+                        padding: 12px 24px
+                        transform: translateX(7%)
+                        display: flex
+                        flex-direction: column
+                        
+                        &__title
+                            font-weight: 500
+                            color: grey_dark
+                            
+        &.section-blog
+            margin-top: 128px
+            padding: 0 144px
+            
+            // &__info
+            .section-blog__info
+                text-align: center
+                &__title
+                    font-size: 2rem
+                    color: grey_dark
+                &__desc
+                    margin-top: 16px
+                    color: grey_clear
+            
+            ul
+                margin-top: 32px
+                display: flex
+                justify-content: center
+                gap: 16px
+                li
+                    position: relative
+                    .img-cont
+                        width: 240px
+                        height: 300px
+                        img
+                            object-fit: cover
+                            border-radius: 8px
+                    .blog-info
+                        position absolute
+                        text-align: center
+                        background: white
+                        border-radius: 10px
+                        margin-top: -10px
+                        padding: 12px 24px
+                        transform: translateX(7%)
+                        display: flex
+                        flex-direction: column
+                        
+                        &__title
+                            font-weight: 500
+                            color: grey_dark
+
+footer
+    background: #3A4753
+    display: flex
+    justify-content: space-around
+    padding: 32px 0
+    *
+        color: white
+    .footer-info
+        font-weight: 500
+        div
+            &:nth-child(1)
+                font-size: 0.9rem
+            &:nth-child(2)
+                font-size: 0.8rem
+                margin-top: 8px
+
+    .footer-social
+        ul
+            display: flex
+            gap: 8px
+            li
+                border-radius: 6px
+                background: #515D67
+                padding: 8px
+                .icon i
+                    color: white
+

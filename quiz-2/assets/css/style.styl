@@ -1,0 +1,255 @@
+azul = #22bce0
+naranja = #dd4f24
+gris-claro = #7a7a7a
+gris-oscuro = #444
+amarillo = #e0d460
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(../fonts/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'iconitos';
+  src:  url('../fonts/Iconos/icomoon.eot?jzdv36');
+  src:  url('../fonts/Iconos/icomoon.eot?jzdv36#iefix') format('embedded-opentype'),
+    url('../fonts/Iconos/icomoon.ttf?jzdv36') format('truetype'),
+    url('../fonts/Iconos/icomoon.woff?jzdv36') format('woff'),
+    url('../fonts/Iconos/icomoon.svg?jzdv36#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+// para que el tamaño de la fuente se adapte a la pantalla
+:root {
+  --font-factor: 1;
+}
+
+html
+    font-family: 'Open Sans'
+
+header
+    background: #444
+    .logo
+        display: inline-block
+        border-right: 1px solid azul
+        padding: 0 30px 0 15px
+        margin: 15px 0
+        img
+            width: 100px
+    .title-actions
+        display: inline-block
+        vertical-align: top
+        margin: 10px 0 0 10px
+        .title
+            h1
+                color: white
+                font-size: calc(25px * var(--font-factor))
+                margin-bottom: 5px
+        .subtitle
+            h3
+                color: azul
+                font-size: calc(18px * var(--font-factor))
+                margin-bottom: 5px
+                font-weight: bold
+                font-style: italic
+        .actions 
+            a
+                color: naranja
+                text-decoration: none
+            a:first-child
+                font-size: calc(16px * var(--font-factor))
+            a:nth-child(2)
+                font-size: calc(18px * var(--font-factor))
+            a:last-child
+                font-size: calc(21px * var(--font-factor))
+    .avatar-action
+        display: inline-block
+        float: right
+        margin-top: 15px
+        margin-right: 15px
+        .btn-publisher
+            display: inline-block
+            background: naranja
+            vertical-align: top 
+            margin-top: calc(50px - (16px / 2) - 5px)
+            padding: 5px 20px
+            margin-right: -10px
+            a
+                text-decoration: none
+                p
+                    color: white
+                    font-style: italic
+                    .ico:before
+                        font-family: 'iconitos'
+                        content: '\e908'
+                        font-size: calc(18px * var(--font-factor))
+                        color: white
+                        margin-right: 10px
+                        
+        .avatar
+            display: inline-block
+            // 1. avatar: imagen por encima
+            position: relative
+            z-index: 1
+            
+            img
+                width: 100px
+                border-radius: 50%
+        .action
+            display: inline-block
+            vertical-align: top 
+            margin-top: calc(50px - (16px / 2) - 5px)
+            padding: 5px 5px
+            background: naranja
+            margin-left: -10px
+            p
+                .ico
+                    transform: rotate(90deg)
+                    display: inline-block
+                .ico:after
+                    font-family: 'iconitos'
+                    content: '\ea1c'
+                    font-size: calc(15px * var(--font-factor))
+                    color: white
+    .emptybox
+        clear: both
+nav
+    background: azul
+    padding: 10px 0 15px 0
+    
+    // 2. triángulo en el nav
+    .triangle
+        display: inline-block
+        width: 0
+        height: 0
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+        border-left: 10px solid white
+        margin-left: 4px
+
+    ul
+        display: inline-block
+        vertical-align: text-top
+        li
+            display: inline-block
+            margin-left: 25px
+            a
+                color: white
+                text-decoration: none
+section
+    article
+        margin: 15px 15px
+        border-bottom-left-radius: 10px 
+        border-bottom-right-radius: 10px
+        box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75)
+        .contents
+            border-bottom: 5px solid azul
+            line-height: 0
+            .image
+                display: inline-block
+                img
+                    height: 200px
+                    width: 150px
+            .blog
+                display: inline-block
+                vertical-align: top 
+                line-height: 1
+                margin-top: 15px
+                margin-left: 20px
+
+                // 3. "hace 20 minutos" totalmente a la derecha
+                // 100% - image width - article_margin (15px + 15px)
+                width: calc(100% - 150px - 30px)
+
+                .title-autor
+                    h3
+                        font-size: calc(20px * var(--font-factor))
+                        font-weight: bold
+                        color: gris-oscuro
+                        font-style: italic    
+                    p
+                        margin-top: 10px 
+                        color: gris-claro
+                        text-transform: capitalize
+                        span
+                            color: naranja
+                            text-decoration: underline
+                            font-weight: bold
+                .tag-time
+                    margin-top: 25px
+                    .tag
+                        display: inline-block
+                        p
+                            background: azul
+                            padding: 3px 10px
+                            color: white
+                            font-weight: bold
+                            border-radius: 8px
+                    .time
+                        display: inline-block  
+                        float: right 
+                        p
+                            color: gris-claro
+                            span
+                                font-weight: bold     
+        .score
+            padding: 10px 0
+            .up-down
+                display: inline-block
+                margin-left: 10px
+                p
+                    .ico
+                        display: inline-block
+                        font-size: calc(20px * var(--font-factor))
+                    .ico:before
+                        font-family: 'iconitos'
+                        content: '\ea1c'
+                    .ico:first-child
+                        color: green
+                        transform: rotate(-90deg)
+                    .ico:last-child
+                        color: red
+                        margin-left: 5px
+                        transform: rotate(90deg)
+            .rating
+                display: inline-block
+                float: right
+                margin-right: 10px
+                p
+                    span:first-child
+                        background: gris-oscuro
+                        margin-right: 10px
+                        padding: 3px 8px
+                        color: white
+                        border-radius: 5px
+                    .ico:before
+                        font-family: 'iconitos'
+                        content: '\e9d9'
+                        color: amarillo
+                        font-size: calc(18px * var(--font-factor))
+footer
+    background: naranja
+    padding: 45px 0
+    text-align: center
+    p
+        color: #f0a996
+        font-weight: bold
+        span
+            display: block
+            font-weight: normal
+        span:before
+            content: '- '
+        span:after
+            content: ' -'
+
+// 4. Ajustar los textos según el tamaño de la pantalla
+@media screen and (max-width: 768px)
+    :root
+        --font-factor: 0.8
+
+@media screen and (max-width: 480px)
+    :root
+        --font-factor: 0.6
+    

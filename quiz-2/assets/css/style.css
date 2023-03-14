@@ -1,0 +1,278 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: 'iconitos';
+  src: url("../fonts/Iconos/icomoon.eot?jzdv36");
+  src: url("../fonts/Iconos/icomoon.eot?jzdv36#iefix") format('embedded-opentype'), url("../fonts/Iconos/icomoon.ttf?jzdv36") format('truetype'), url("../fonts/Iconos/icomoon.woff?jzdv36") format('woff'), url("../fonts/Iconos/icomoon.svg?jzdv36#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+:root {
+  --font-factor: 1;
+}
+html {
+  font-family: 'Open Sans';
+}
+header {
+  background: #444;
+}
+header .logo {
+  display: inline-block;
+  border-right: 1px solid #22bce0;
+  padding: 0 30px 0 15px;
+  margin: 15px 0;
+}
+header .logo img {
+  width: 100px;
+}
+header .title-actions {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0 0 10px;
+}
+header .title-actions .title h1 {
+  color: #fff;
+  font-size: calc(25px * var(--font-factor));
+  margin-bottom: 5px;
+}
+header .title-actions .subtitle h3 {
+  color: #22bce0;
+  font-size: calc(18px * var(--font-factor));
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-style: italic;
+}
+header .title-actions .actions a {
+  color: #dd4f24;
+  text-decoration: none;
+}
+header .title-actions .actions a:first-child {
+  font-size: calc(16px * var(--font-factor));
+}
+header .title-actions .actions a:nth-child(2) {
+  font-size: calc(18px * var(--font-factor));
+}
+header .title-actions .actions a:last-child {
+  font-size: calc(21px * var(--font-factor));
+}
+header .avatar-action {
+  display: inline-block;
+  float: right;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+header .avatar-action .btn-publisher {
+  display: inline-block;
+  background: #dd4f24;
+  vertical-align: top;
+  margin-top: calc(50px - (16px / 2) - 5px);
+  padding: 5px 20px;
+  margin-right: -10px;
+}
+header .avatar-action .btn-publisher a {
+  text-decoration: none;
+}
+header .avatar-action .btn-publisher a p {
+  color: #fff;
+  font-style: italic;
+}
+header .avatar-action .btn-publisher a p .ico:before {
+  font-family: 'iconitos';
+  content: '\e908';
+  font-size: calc(18px * var(--font-factor));
+  color: #fff;
+  margin-right: 10px;
+}
+header .avatar-action .avatar {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+header .avatar-action .avatar img {
+  width: 100px;
+  border-radius: 50%;
+}
+header .avatar-action .action {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: calc(50px - (16px / 2) - 5px);
+  padding: 5px 5px;
+  background: #dd4f24;
+  margin-left: -10px;
+}
+header .avatar-action .action p .ico {
+  transform: rotate(90deg);
+  display: inline-block;
+}
+header .avatar-action .action p .ico:after {
+  font-family: 'iconitos';
+  content: '\ea1c';
+  font-size: calc(15px * var(--font-factor));
+  color: #fff;
+}
+header .emptybox {
+  clear: both;
+}
+nav {
+  background: #22bce0;
+  padding: 10px 0 15px 0;
+}
+nav .triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+  margin-left: 4px;
+}
+nav ul {
+  display: inline-block;
+  vertical-align: text-top;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+section article {
+  margin: 15px 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.75);
+}
+section article .contents {
+  border-bottom: 5px solid #22bce0;
+  line-height: 0;
+}
+section article .contents .image {
+  display: inline-block;
+}
+section article .contents .image img {
+  height: 200px;
+  width: 150px;
+}
+section article .contents .blog {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+  margin-top: 15px;
+  margin-left: 20px;
+  width: calc(100% - 150px - 30px);
+}
+section article .contents .blog .title-autor h3 {
+  font-size: calc(20px * var(--font-factor));
+  font-weight: bold;
+  color: #444;
+  font-style: italic;
+}
+section article .contents .blog .title-autor p {
+  margin-top: 10px;
+  color: #7a7a7a;
+  text-transform: capitalize;
+}
+section article .contents .blog .title-autor p span {
+  color: #dd4f24;
+  text-decoration: underline;
+  font-weight: bold;
+}
+section article .contents .blog .tag-time {
+  margin-top: 25px;
+}
+section article .contents .blog .tag-time .tag {
+  display: inline-block;
+}
+section article .contents .blog .tag-time .tag p {
+  background: #22bce0;
+  padding: 3px 10px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+section article .contents .blog .tag-time .time {
+  display: inline-block;
+  float: right;
+}
+section article .contents .blog .tag-time .time p {
+  color: #7a7a7a;
+}
+section article .contents .blog .tag-time .time p span {
+  font-weight: bold;
+}
+section article .score {
+  padding: 10px 0;
+}
+section article .score .up-down {
+  display: inline-block;
+  margin-left: 10px;
+}
+section article .score .up-down p .ico {
+  display: inline-block;
+  font-size: calc(20px * var(--font-factor));
+}
+section article .score .up-down p .ico:before {
+  font-family: 'iconitos';
+  content: '\ea1c';
+}
+section article .score .up-down p .ico:first-child {
+  color: #008000;
+  transform: rotate(-90deg);
+}
+section article .score .up-down p .ico:last-child {
+  color: #f00;
+  margin-left: 5px;
+  transform: rotate(90deg);
+}
+section article .score .rating {
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+}
+section article .score .rating p span:first-child {
+  background: #444;
+  margin-right: 10px;
+  padding: 3px 8px;
+  color: #fff;
+  border-radius: 5px;
+}
+section article .score .rating p .ico:before {
+  font-family: 'iconitos';
+  content: '\e9d9';
+  color: #e0d460;
+  font-size: calc(18px * var(--font-factor));
+}
+footer {
+  background: #dd4f24;
+  padding: 45px 0;
+  text-align: center;
+}
+footer p {
+  color: #f0a996;
+  font-weight: bold;
+}
+footer p span {
+  display: block;
+  font-weight: normal;
+}
+footer p span:before {
+  content: '- ';
+}
+footer p span:after {
+  content: ' -';
+}
+@media screen and (max-width: 768px) {
+  :root {
+    --font-factor: 0.8;
+  }
+}
+@media screen and (max-width: 480px) {
+  :root {
+    --font-factor: 0.6;
+  }
+}

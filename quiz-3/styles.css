@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.canva {
+  text-align: center;
+}
+.canva .row .pixel {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.canva .row .b {
+  background: #000;
+}
+.canva .row .y {
+  background: #ff0;
+}
+.canva .row .w {
+  background: #fff;
+}
